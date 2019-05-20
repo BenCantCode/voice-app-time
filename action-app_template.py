@@ -31,7 +31,7 @@ class Time(object):
         coming_intent = intent_message.intent.intent_name
         if(coming_intent == 'time'):
             hermes.publish_end_session(intent_message.session_id, "")
-            hermes.publish_start_session_notification(intent_message.site_id, "It is" + datetime.now().strftime("%-I:%m %p"), "")
+            hermes.publish_start_session_notification(intent_message.site_id, "It is" + datetime.now().strftime("%-I:%M %p"), "")
 
     # --> Register callback function and start MQTT
     def start_blocking(self):
