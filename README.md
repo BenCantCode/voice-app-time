@@ -1,4 +1,4 @@
-## Greetings Snips
+## Time
 
 This is based on snips-app-template by Snips.
 [Link to original project.](https://github.com/snipsco/snips-app-template-py)
