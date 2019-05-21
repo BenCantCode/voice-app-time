@@ -24,11 +24,13 @@ class Time(object):
     """
 
     def __init__(self):
+        print('Running time!')
         self.start_blocking()
 
     # --> Master callback function, triggered everytime an intent is recognized
     def master_intent_callback(self, hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
+        print(coming_intent)
         if(coming_intent == 'time'):
             hermes.publish_end_session(intent_message.session_id, "")
             hermes.publish_start_session_notification(intent_message.site_id, "It is" + datetime.now().strftime("%-I:%M %p"), "")
