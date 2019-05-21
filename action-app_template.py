@@ -31,7 +31,7 @@ class Time(object):
     def master_intent_callback(self, hermes, intent_message):
         coming_intent = intent_message.intent.intent_name
         print(coming_intent)
-        if(coming_intent == 'time'):
+        if(coming_intent == 'imbored:time'):
             hermes.publish_end_session(intent_message.session_id, "")
             hermes.publish_start_session_notification(intent_message.site_id, "It is" + datetime.now().strftime("%-I:%M %p"), "")
 
